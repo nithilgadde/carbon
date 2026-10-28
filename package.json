@@ -1,0 +1,53 @@
+{
+  "name": "pi-carbon",
+  "version": "0.1.0",
+  "description": "ZenTUI layout with Claude Code-style tools, diffs, and thinking for Pi.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "zentui",
+    "claude-code",
+    "terminal-ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nithilgadde/carbon.git"
+  },
+  "homepage": "https://github.com/nithilgadde/carbon#readme",
+  "bugs": {
+    "url": "https://github.com/nithilgadde/carbon/issues"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "files": [
+    "extensions",
+    "scripts",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/index.ts"
+    ]
+  },
+  "scripts": {
+    "configure": "node scripts/configure.mjs",
+    "test": "node --test test/configure.test.mjs",
+    "test:integration": "node test/renderers.mjs"
+  },
+  "dependencies": {
+    "pi-cc-extensions": "1.0.12"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*"
+  },
+  "bundledDependencies": [
+    "pi-cc-extensions"
+  ]
+}
